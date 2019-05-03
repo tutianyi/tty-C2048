@@ -13,3 +13,9 @@
 	<conio.h>
 	"board.h"
 
+1556898449 source:d:\tty\tomorrowsoft\tty-c2048\c2048\link.c
+	<stdlib.h>
+	"link.h"
+
+1556898409 d:\tty\tomorrowsoft\tty-c2048\c2048\link.h
+
