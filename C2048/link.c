@@ -35,7 +35,62 @@ void Release(struct Head *h)
     }
     free(h);
 }
+
+static struct Node *FindNotZero(struct Node *p)
+{
+    while(p!=NULL && *(p->n)==0)
+        p = p->next;
+    return p;
+}
+
+static struct Node *FindZero(struct Node *p)
+{
+    while(p!=NULL && *(p->n)!=0)
+        p = p->next;
+    return p;
+}
+
+static int Merge(struct Head *h)
+{
+    struct Node *p,*q;
+    int moved=0;
+
+    p = h->next;
+    while(1)
+    {
+        p = FindNotZero(p);       if(p==NULL) break;
+        q = FindNotZero(p->next); if(q==NULL) break;
+        if(*(p->n)==*(q->n))
+        {
+            *(p->n) += *(q->n);
+            *(q->n) = 0;
+            p = p->next;
+            moved = 1;
+        }
+        p = q;
+    }
+    return moved;
+}
+
+static int RemoveBlank(struct Head *h)
+{
+    struct Node *p,*q;
+    int moved=0;
+
+    p = h->next;
+    while(1)
+    {
+        p = FindZero(p);          if(p==NULL) break;
+        q = FindNotZero(p->next); if(q==NULL) break;
+        *(p->n) = *(q->n);
+        *(q->n) = 0;
+        p = p->next;
+        moved = 1;
+    }
+    return moved;
+}
+
 int Move(struct Head *h)
 {
-    return 1;
+    return Merge(h)+RemoveBlank(h);
 }

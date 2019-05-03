@@ -1,6 +1,7 @@
 # depslib dependency file v1.0
-1556866943 source:d:\tty\tomorrowsoft\tty-c2048\c2048\board.c
+1556901856 source:d:\tty\tomorrowsoft\tty-c2048\c2048\board.c
 	"board.h"
+	"link.h"
 	<time.h>
 	<stdlib.h>
 
@@ -13,7 +14,7 @@
 	<conio.h>
 	"board.h"
 
-1556898449 source:d:\tty\tomorrowsoft\tty-c2048\c2048\link.c
+1556901729 source:d:\tty\tomorrowsoft\tty-c2048\c2048\link.c
 	<stdlib.h>
 	"link.h"
 

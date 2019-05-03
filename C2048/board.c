@@ -1,4 +1,5 @@
 #include "board.h"
+#include "link.h"
 #include <time.h>
 #include <stdlib.h>
 #define ROW 4
@@ -47,17 +48,57 @@ void InsertANumber()
 
 int MoveLeft()
 {
-    return 1;
+    int i,j,moved=0;
+    struct Head *h;
+    for(i=0;i<ROW;i++)
+    {
+        h = NewList();
+        for(j=0;j<COL;j++)
+            InsertNode(h, &cells[i][j]);
+        moved += Move(h);
+        Release(h);
+    }
+    return moved;
 }
 int MoveRight()
 {
-    return 1;
+    int i,j,moved=0;
+    struct Head *h;
+    for(i=0;i<ROW;i++)
+    {
+        h = NewList();
+        for(j=COL-1;j>=0;j--)
+            InsertNode(h, &cells[i][j]);
+        moved += Move(h);
+        Release(h);
+    }
+    return moved;
 }
 int MoveUp()
 {
-    return 1;
+    int i,j,moved=0;
+    struct Head *h;
+    for(j=0;j<COL;j++)
+    {
+        h = NewList();
+        for(i=0;i<ROW;i++)
+            InsertNode(h, &cells[i][j]);
+        moved += Move(h);
+        Release(h);
+    }
+    return moved;
 }
 int MoveDown()
 {
-    return 1;
+    int i,j,moved=0;
+    struct Head *h;
+    for(j=0;j<COL;j++)
+    {
+        h = NewList();
+        for(i=ROW-1;i>=0;i--)
+            InsertNode(h, &cells[i][j]);
+        moved += Move(h);
+        Release(h);
+    }
+    return moved;
 }
