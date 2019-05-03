@@ -42,8 +42,18 @@ void Output()
 
 void InsertANumber()
 {
-    srand((unsigned)time(NULL));
-    cells[rand()%ROW][rand()%COL] = 2;
+    int i,j;
+    struct Head *h = NewList();
+    for(i=0;i<ROW;i++)
+    {
+        for(j=0;j<COL;j++)
+        {
+            if(cells[i][j]==0)
+                InsertNode(h, &cells[i][j]);
+        }
+    }
+    AddANumber(h);
+    Release(h);
 }
 
 int MoveLeft()

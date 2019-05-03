@@ -94,3 +94,16 @@ int Move(struct Head *h)
 {
     return Merge(h)+RemoveBlank(h);
 }
+
+void AddANumber(struct Head *h)
+{
+    int i,r;
+    struct Node *p;
+    srand((unsigned)time(NULL));
+    r = rand()%h->count;
+    for(p = h->next,i=0; i<r; i++)
+    {
+        p = p->next;
+    }
+    *(p->n) = 2;
+}
