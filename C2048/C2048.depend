@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1556865430 source:d:\tty\tomorrowsoft\tty-c2048\c2048\board.c
+	"board.h"
+
+1556865413 d:\tty\tomorrowsoft\tty-c2048\c2048\board.h
+	<stdio.h>
+
+1556865450 source:d:\tty\tomorrowsoft\tty-c2048\c2048\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	"board.h"
+
