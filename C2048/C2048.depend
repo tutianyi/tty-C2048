@@ -20,3 +20,24 @@
 
 1556898409 d:\tty\tomorrowsoft\tty-c2048\c2048\link.h
 
+1560905577 source:c:\users\administrator\desktop\tty\tty-c2048\c2048\board.c
+	"board.h"
+	"link.h"
+	<time.h>
+	<stdlib.h>
+
+1560905577 c:\users\administrator\desktop\tty\tty-c2048\c2048\board.h
+	<stdio.h>
+
+1560905577 c:\users\administrator\desktop\tty\tty-c2048\c2048\link.h
+
+1560905577 source:c:\users\administrator\desktop\tty\tty-c2048\c2048\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	"board.h"
+
+1560905577 source:c:\users\administrator\desktop\tty\tty-c2048\c2048\link.c
+	<stdlib.h>
+	"link.h"
+

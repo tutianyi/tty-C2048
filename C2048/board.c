@@ -20,9 +20,9 @@ static void OutputLine(int row)
     {
         printf("©¦");
         if(cells[row][j]==0)
-            printf("    ");
+            printf("        ");
         else
-            printf("%4d", cells[row][j]);
+            printf("%8d", cells[row][j]);
     }
     printf("©¦\n");
 }
