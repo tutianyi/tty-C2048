@@ -35,6 +35,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="board.h" />
+		<Unit filename="link.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="link.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
